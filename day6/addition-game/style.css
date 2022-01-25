@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+body {
+	background: #0f0e17;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main {
+    background: #ff8906;
+    padding: 1em;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(2);
+    grid-gap: 8px;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.number {
+    padding: 5px;
+    /* border: 2px solid black; */
+    background: #fffffe;
+    border-radius: 5px;
+}
+
+main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num1, .num2, .plus {
+    grid-row: 1;
+}
+
+.num1 {
+    grid-column: 1 / 2;
+}
+
+.plus {
+    grid-column: 2 / 3;
+}
+
+.operator {
+    font-size: 25px;
+}
+
+.num2 {
+    grid-column: 3 / 4;
+}
+
+.form {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.equals {
+    width: 15%;
+    font-size: 28px;
+}
+
+input {
+    border-radius: 2px;
+    border: none;
+    font-size: 18px;
+    padding: 2px;
+    width: 50%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.button {
+    background: #fffffe;
+    border: none;
+    border-radius: 2px;
+    /* padding: 5px; */
+    font-weight: bold;
+    color: #0f0e17;
+    width: 25%;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}

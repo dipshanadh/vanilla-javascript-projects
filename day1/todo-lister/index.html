@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://kit.fontawesome.com/22e52adf9d.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Dipshan's todo list</title>
+		<style>
+			@media only screen and (max-width: 345px) {
+				.submit {
+					margin-top: 0.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header id="main-header" class="bg-success text-white p-3 mb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 id="header-title">Dipshan's todo list</h2>
+					</div>
+					<div class="col-md-6 align-self-center">
+						<input
+							type="text"
+							class="form-control"
+							id="filter"
+							placeholder="Search todos"
+						/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="container mb-4">
+			<div id="main" class="card card-body">
+				<h2 class="title">Add todos</h2>
+				<form class="form-inline mb-3" id="addForm">
+					<input
+						type="text"
+						class="form-contorl mr-2"
+						placeholder="Enter a todo"
+						id="item"
+					/>
+					<input
+						type="submit"
+						class="btn btn-dark submit"
+						value="Submit"
+					/>
+				</form>
+				<h2 class="title">Todos</h2>
+				<ul id="items" class="list-group"></ul>
+				<hr>
+				<button
+					id="deleteAll"
+					class="btn btn-info mt-3"
+					style="width: 100px"
+				>
+					Delete all
+				</button>
+			</div>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>

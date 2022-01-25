@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+}
+
+:root {
+	--bg-color: #fef6e4;
+	--headline: #001858;
+	--paragraph: #172c66;
+	--card-bg: #001858;
+	--card-paragraph: #fef6e4;
+	--button-bg: #fef6e4;
+	--buttong-txt: #001858;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--bg-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1em;
+	box-sizing: border-box;
+	position: relative;
+}
+
+button {
+	background: var(--card-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	padding: 8px 15px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	color: var(--card-paragraph);
+	border-radius: 2.5px;
+}
+
+.modal {
+	max-width: 300px;
+	background: var(--card-bg);
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 20px;
+	color: var(--button-bg);
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    display: none;
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: repeat(5);
+    grid-row-gap: 8px;
+    justify-content: center;
+    align-items: center;
+    animation-name: modelOpen;
+    animation-duration: 0.5s;
+}
+
+h1 {
+    font-size: 18px;
+    grid-column: 1 / 2;
+    grid-row: 1 /  2;
+}
+
+.close {
+	background: var(--button-bg);
+	color: var(--buttong-txt);
+	padding: 5px;
+    float: right;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 25px;
+    font-size: 18px;
+}
+
+.one {
+    /* margin: 8px auto; */
+    width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / span 2;
+}
+
+.two {
+    /* margin: 8px auto; */
+    width: 100%;
+    grid-row: 4 / 5;
+    grid-column: 1 / span 2;
+}
+
+p {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 2;
+}
+
+.footer {
+    font-size: 20px;
+    grid-row: 5;
+    grid-column: 1 / span 2;
+}
+
+@keyframes modelOpen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
