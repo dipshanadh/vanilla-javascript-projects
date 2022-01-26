@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+}
+
+:root {
+	--background: #fffffe;
+	--headline: #020826;
+	--sub-headline: #716040;
+	--card-background: #eaddcf;
+	--card-heading: #020826;
+	--card-paragraph: #716040;
+	--tertiary: #f25042;
+}
+
+body {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+body > * {
+	width: 100%;
+	background: var(--background);
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--headline);
+}
+
+.underline {
+	background: var(--sub-headline);
+	height: 5px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	margin: 1em;
+	width: 100%;
+}
+
+.filter-items {
+	border: 2px solid;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 8px;
+	text-transform: capitalize;
+	border-radius: 5px;
+	border: 2px solid var(--card-paragraph);
+	color: var(--card-heading);
+	background: var(--card-background);
+	cursor: pointer;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+input {
+	margin-right: 10px;
+	box-sizing: border-box;
+	height: 40px;
+	padding: 5px;
+	font-size: 1rem;
+	width: 75%;
+	max-width: 500px;
+}
+
+input {
+	border-radius: 5px;
+	border: 2px solid var(--card-paragraph);
+	color: var(--card-heading);
+	background: var(--card-background);
+}
+
+.items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.item {
+	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	/* height: 200px; */
+}
+
+img {
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+}
+
+h2 {
+	color: var(--card-heading);
+	font-weight: normal;
+}

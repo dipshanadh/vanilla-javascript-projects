@@ -15,14 +15,15 @@
 }
 
 body {
-	padding: 2em;
+	padding: 1em;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-items: center;
 	align-items: center;
-	grid-gap: 10px;
+	grid-gap: 2em;
 	background: var(--background);
 	color: var(--paragraph);
+	min-height: 100vh;
 }
 
 .left {
@@ -58,19 +59,20 @@ h2 {
 p {
 	margin-bottom: 15px;
 	font-size: 1.2em;
-    max-width: 500px;
+	max-width: 500px;
 }
 
 img {
-	width: auto;
-	height: 80%;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
 }
 
 .countdown {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
-    text-align: center;
+	text-align: center;
 }
 
 .time {
@@ -82,6 +84,7 @@ img {
 	align-items: center;
 	flex-direction: column;
 	text-transform: uppercase;
+	width: 75px;
 }
 
 .number {
@@ -94,18 +97,15 @@ img {
 		justify-content: center;
 		align-items: flex-start;
 		flex-direction: column;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
-    .left {
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center;
-    }
-
-	.container {
+	.countdown {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		flex-wrap: wrap;
+		flex: 1;
 	}
 }
