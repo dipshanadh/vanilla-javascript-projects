@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Github API project || Vanilla JavaScript projects || Dipshan
+			Adhikari
+		</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			section {
+				width: 450px;
+			}
+			.details {
+				display: none;
+			}
+		</style>
+	</head>
+	<body class="bg-secondary p-4">
+		<section class="bg-primary card mb-2">
+			<div class="card-body">
+				<h1 class="card-title">Github API</h1>
+
+				<form>
+					<label for="input" class="form-label"
+						>Enter your username adn get the details</label
+					>
+					<div class="input-group">
+						<span class="input-group-text"
+							>https://api.github.com/users/</span
+						>
+						<input
+							type="text"
+							class="form-control"
+							id="input"
+							required
+						/>
+						<!-- <button type="submit" class="btn btn-dark">
+							Submit
+						</button> -->
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="details card bg-white p-3 mt-3">
+			<h2>Details</h2>
+			<img
+				src=""
+				alt="image"
+				width="200px"
+				class="rounded mb-3 d-block"
+			/>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">Name: <span id="name"></span></li>
+				<li class="list-group-item" id="email-group">Email: <span id="email"></span></li>
+				<li class="list-group-item">Bio: <span id="bio"></span></li>
+				<li class="list-group-item">
+					Company: <span id="company"></span>
+				</li>
+				<li class="list-group-item">
+					Website: <span id="website"></span>
+				</li>
+				<li class="list-group-item">
+					Twitter username: <span id="twitter"></span>
+				</li>
+				<li class="list-group-item">
+					Public repos: <span id="public-repos"></span>
+				</li>
+				<li class="list-group-item">
+					Followers: <span id="followers"></span>
+				</li>
+				<li class="list-group-item">
+					Following: <span id="following"></span>
+				</li>
+				<li class="list-group-item">
+					Joined at <span id="joined-at"></span>
+				</li>
+			</ul>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

@@ -1,16 +1,14 @@
-// -- querySelectors start --
-let input = document.querySelector("input");
-let item = document.querySelectorAll(".item");
-let filterItems = document.querySelectorAll(".filter-items");
-// -- querySelectors end
+// -- querySelectors  --
+let input = document.querySelector("input"), 
+    item = document.querySelectorAll(".item"), 
+    filterItems = document.querySelectorAll(".filter-items");
 
-// -- event listeners start ---
-input.addEventListener("keyup", keyFilter);
+// -- event listeners  ---
+input.addEventListener("keydown", keyFilter);
 filterItems.forEach(el => el.addEventListener("click", filter));
-document.querySelector("form").addEventListener("submit", keyFilter);
-// -- event listeners end --
+document.querySelector("form").addEventListener("submit", e => e.preventDefault());
 
-// -- functions start --
+// -- functions  --
 function filter(e) {
     input.value = "";
 	let toFilter = e.target.textContent;
@@ -20,7 +18,6 @@ function filter(e) {
 }
 
 function keyFilter(e) {
-    e.preventDefault();
     var text = input.value.toLowerCase();
     item.forEach(el => {
         let itemName = el.children[1].textContent;
@@ -31,4 +28,3 @@ function keyFilter(e) {
 			: el.style.display = "none";
     })
 }
-// -- functions end --
