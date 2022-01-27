@@ -20,8 +20,8 @@ async function getDetails(e) {
 	let details = await response.json();
 	updateDOM(details);
 }
-//twitter.com/dipshanadh
-https: function updateDOM(details) {
+
+function updateDOM(details) {
 	document.querySelector(".details").style.display = "block";
 	img.src = details.avatar_url;
 	fullName.textContent = details.name;
