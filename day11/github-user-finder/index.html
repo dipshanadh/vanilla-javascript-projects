@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>
-			Github API project || Vanilla JavaScript projects || Dipshan
+			Github user finder project || Vanilla JavaScript projects || Dipshan
 			Adhikari
 		</title>
 		<link
@@ -19,23 +19,36 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				padding: 1em;
 			}
-			section {
-				width: 450px;
+			h3 {
+				font-size: 20px;
+			}
+			.alert,
+			.warning {
+				display: none;
 			}
 			.details {
 				display: none;
 			}
+			section {
+				width: 100%;
+			}
+			@media screen and (min-width: 500px) {
+				section {
+					width: 500px;
+				}
+			}
 		</style>
 	</head>
-	<body class="bg-secondary p-4">
-		<section class="bg-primary card mb-2">
+	<body class="bg-dark p-4">
+		<section class="bg-white card mb-2">
 			<div class="card-body">
-				<h1 class="card-title">Github API</h1>
+				<h1 class="card-title">Github user finder</h1>
 
 				<form>
 					<label for="input" class="form-label"
-						>Enter your username adn get the details</label
+						>Enter your username and get the suer details</label
 					>
 					<div class="input-group">
 						<span class="input-group-text"
@@ -45,14 +58,17 @@
 							type="text"
 							class="form-control"
 							id="input"
-							required
+							placeholder="username"
 						/>
-						<!-- <button type="submit" class="btn btn-dark">
-							Submit
-						</button> -->
 					</div>
 				</form>
 			</div>
+		</section>
+		<section class="alert alert-danger mt-2" role="alert">
+			Please enter a valid username !
+		</section>
+		<section class="alert alert-warning mt-2 warning">
+			Please fill the username !
 		</section>
 		<section class="details card bg-white p-3 mt-3">
 			<h2>Details</h2>
@@ -63,8 +79,10 @@
 				class="rounded mb-3 d-block"
 			/>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Name: <span id="name"></span></li>
-				<li class="list-group-item" id="email-group">Email: <span id="email"></span></li>
+				<h3 id="name" class="list-group-item"></h3>
+				<li class="list-group-item" id="email-group">
+					Email: <span id="email"></span>
+				</li>
 				<li class="list-group-item">Bio: <span id="bio"></span></li>
 				<li class="list-group-item">
 					Company: <span id="company"></span>
@@ -74,6 +92,9 @@
 				</li>
 				<li class="list-group-item">
 					Twitter username: <span id="twitter"></span>
+				</li>
+				<li class="list-group-item">
+					Location: <span id="location"></span>
 				</li>
 				<li class="list-group-item">
 					Public repos: <span id="public-repos"></span>
