@@ -7,7 +7,7 @@ var itemList = document.getElementById("items");
 var filter = document.getElementById("filter");
 var deleteAll = document.getElementById("deleteAll");
 
-// all event listeners fom here !!
+// all event listeners from here !!
 // form submit event
 form.addEventListener("submit", addItem);
 // delete event
