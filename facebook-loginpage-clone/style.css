@@ -1,0 +1,152 @@
+        body {
+            margin: 0;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(128, 128, 128, .05);
+        }
+
+        .details {
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: 6500;
+            margin-top: 0;
+            margin-left: 1em;
+        }
+
+        .img {
+            margin-bottom: 0;
+        }
+
+        .left {
+            margin-right: 1em;
+            margin-left: 2em;
+            max-width: 500px;
+        }
+
+        .right {
+            margin-right: 1em;
+            margin-left: 2em;
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .create-page {
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: .3px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            padding: .5em;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 1px 2px rgba(128, 128, 128, .2);
+        }
+
+        input {
+            margin: .5em;
+            padding: .5em;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        .input {
+            border: 1px solid rgba(128, 128, 128, 0.7); 
+        }
+
+        #forgot-password {
+            color:rgba(0, 0, 255, 0.65);
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: lighter;
+            font-size: 17px;
+            margin: .5em;
+        }
+
+        .login {
+            color: white;
+            font-weight: 600;
+            background-color: rgba(0, 0, 255, 0.65);
+            font-size: 20px;
+            border: none;
+            border-radius: .5em;
+            box-shadow: none;
+        }
+
+        .create-account {
+            color: white;
+            background-color: rgba(30, 187, 30);
+            padding: .8em;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: sans-serif;
+            width: 50%;
+            margin: .5em;
+            transition: 1s background-color ease;
+        }
+
+        .create-account:hover {
+            background-color: rgba(22, 163, 22, .9);
+        }
+
+        .create-page {
+            letter-spacing: .5px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            display: block;
+            width: 95%;
+            border: 0. solid rgba(128, 128, 128, 0.7);
+        }
+
+        footer {
+            background-color: white;
+            padding: 2em 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: gray;
+        }
+
+        .links>a {
+            margin: 0 10px;
+            color: gray;
+        }
+
+        .copyright {
+            margin: 10px;
+        }
