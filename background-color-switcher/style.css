@@ -5,7 +5,6 @@
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 	text-align: center;
-    color: black;
 }
 
 :root {
@@ -18,15 +17,16 @@
 }
 
 body {
-    padding: 1em;
-    background: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	padding: 1em;
+	background: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: black;
 }
 
 h1 {
-    margin-top: 1em;
+	margin-top: 1em;
 }
 
 button {
@@ -34,8 +34,8 @@ button {
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-    margin: 10px;
-    cursor: pointer;
+	margin: 10px;
+	cursor: pointer;
 }
 
 .buttons {
@@ -43,33 +43,34 @@ button {
 	justify-content: space-evenly;
 	align-items: center;
 	margin: 1em auto;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .black {
-    background: var(--black);
+	background: var(--black);
 }
 
 .green {
-    background: var(--green);
+	background: var(--green);
 }
 
 .blue {
-    background: var(--blue);
+	background: var(--blue);
 }
 
 .pink {
-    background: var(--pink);
+	background: var(--pink);
 }
 
 .brown {
-    background: var(--brown);
+	background: var(--brown);
 }
 
 p {
-    font-size: 20px;
+	font-size: 20px;
 }
 
-.buttons, p { 
-    max-width: 600px;
+.buttons,
+p {
+	max-width: 600px;
 }
