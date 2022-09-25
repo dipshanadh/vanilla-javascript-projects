@@ -1,22 +1,22 @@
-let days = document.querySelector(".days")
-let hours = document.querySelector(".hours")
-let minutes = document.querySelector(".minutes")
-let seconds = document.querySelector(".seconds")
+const days = document.querySelector(".days"),
+	hours = document.querySelector(".hours"),
+	minutes = document.querySelector(".minutes"),
+	seconds = document.querySelector(".seconds")
 
 const countDown = () => {
 	// first take the deadline and  use .getTime() to convert into milisecond
-	const deadline = new Date("February 1, 2023 09:30:00").getTime()
-	// similary convert todays date to miliseconds
-	const todaysDate = new Date().getTime()
-	// now find the difference by substracting
-	// here we converted all things to milisecond so that we can find the diffrence and show up in tha page
-	const difference = deadline - todaysDate
+	const deadline = new Date("February 1, 2023 09:30:00").getTime(),
+		// similary convert todays date to miliseconds
+		todaysDate = new Date().getTime(),
+		// now find the difference by substracting
+		// here we converted all things to milisecond so that we can find the diffrence and show up in tha page
+		difference = deadline - todaysDate
 
 	// how does the time work ?
-	const second = 1000 // here one second is 1000 milisecond
-	const minute = second * 60
-	const hour = minute * 60
-	const day = hour * 24
+	const second = 1000, // here one second is 1000 milisecond
+		minute = second * 60,
+		hour = minute * 60,
+		day = hour * 24
 
 	// now we have the gap, so we can calculate the remaining day, hour, minute and second
 

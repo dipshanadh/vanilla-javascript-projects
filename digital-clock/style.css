@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 :root {
@@ -12,86 +13,67 @@
 	--card-background: #16161a;
 	--paragraph: #94a1b2;
 	--highlight: #7f5af0;
-    --tertiary: #2cb67d;
+	--tertiary: #2cb67d;
 }
 
 body {
 	background: var(--background);
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	display: grid;
+	place-items: center;
 	padding: 1em;
-	box-sizing: border-box;
 }
 
 h1 {
 	color: var(--headline);
 	font-family: "Open Sans", sans-serif;
-	margin-bottom: 10px;
+	margin-bottom: 32px;
 }
 
-main {
+main > div {
+	padding: 16px;
+	background: var(--card-background);
+	border-radius: 10px;
+}
+
+main > div > div {
 	display: grid;
-	grid-template-columns: repeat(3, 75px);
-    grid-template-rows: repeat(4);
-    grid-gap: 10px;
-	grid-column-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
 	font-size: 40px;
 	font-family: "Orbitron", sans-serif;
-	background: var(--card-background);
 	color: var(--paragraph);
-	border-radius: 10px;
-    padding: .5em;
-	/* height: 100px; */
-	/* width: 350px; */
-    justify-content: center;
-    align-content: center;
+	border-bottom: 1px solid white;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .highlight {
 	color: var(--highlight);
-	font-size: 16px;
-	grid-row: 2 / 3;
-	grid-column: 1 / span 3;
 	font-size: 25px;
-	letter-spacing: 2px;
+	letter-spacing: 5px;
+	grid-column-start: 2;
 }
 
 .time {
 	background: rgba(41, 41, 48, 0.5);
 	padding: 5px 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 5px;
-}
-
-hr {
-	grid-row: 3 / 4;
-	grid-column: 1 / span 3;
-	width: 100%;
+	border-radius: 6px;
+	min-width: 85px;
 }
 
 .calender {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--tertiary);
-    grid-column: 1 / span 4;
-    grid-row: 4;
-    font-size: calc(40px - 25%);
+	font-family: "Open Sans", sans-serif;
+	color: var(--tertiary);
+	font-size: 40px;
 }
 
 @media (max-width: 400px) {
-	main {
+	main > div > div {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-
-	main > div {
-		width: 85px;
 	}
 
 	.highlight {
