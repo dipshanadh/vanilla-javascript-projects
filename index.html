@@ -27,6 +27,7 @@
 		/>
 
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./projects.js"></script>
 
 		<script>
 			tailwind.config = {
@@ -41,7 +42,7 @@
 						},
 					},
 				},
-			}
+			};
 		</script>
 	</head>
 	<body class="font-['open_sans'] bg-black">
@@ -70,7 +71,10 @@
 						></path>
 					</svg>
 				</a>
-				<a href="mailto:dipshanadhikari1234@gmail.com">
+				<a
+					href="https://linkedin.com/in/dipshanadh"
+					target="_blank"
+				>
 					<button
 						class="font-semibold border-2 border-pink rounded-3xl px-4 py-1 hover:scale-110 transition ease-in-out duration-300"
 					>
@@ -130,6 +134,7 @@
 			<section>
 				<div
 					class="max-w-screen-lg mx-auto my-16 grid grid-cols-3 gap-8 text-white text-center font-bold text-2xl"
+					id="projects"
 				>
 					<div
 						class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/advice-generator.png')] bg-cover bg-center"
@@ -163,24 +168,36 @@
 							See live
 						</a>
 					</div>
-					<div
-						class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/contact-us.jpeg')] bg-cover bg-center"
-					>
-						<div
-							class="w-full h-full absolute top-0 left-0 bg-black opacity-50"
-						></div>
-
-						<p class="drop-shadow-md">Contact Us</p>
-
-						<a
-							href="./contact-us/"
-							class="absolute right-4 top-4 px-2 py-1 bg-orange rounded-lg text-white text-sm font-semibold hover:underline underline-offset-2"
-						>
-							See live
-						</a>
-					</div>
 				</div>
 			</section>
 		</main>
+
+		<script>
+			const container = document.getElementById("projects");
+
+			container.innerHTML = projects
+				.map(
+					project =>
+						`
+<div
+	class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/${project.link}.png')] bg-cover bg-center"
+>
+	<div
+		class="w-full h-full absolute top-0 left-0 bg-black opacity-50"
+	></div>
+
+	<p class="drop-shadow-md">${project.name}</p>
+
+	<a
+		href="./${project.link}"
+		class="absolute right-4 top-4 px-2 py-1 bg-orange roundetext-white text-sm font-semibold hover:underline underline-offset-2"
+	>
+		See live
+	</a>
+</div>
+`
+				)
+				.join("");
+		</script>
 	</body>
 </html>
