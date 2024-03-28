@@ -27,7 +27,6 @@
 		/>
 
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="./projects.js"></script>
 
 		<script>
 			tailwind.config = {
@@ -51,7 +50,7 @@
 				class="max-w-screen-lg mx-auto flex items-center justify-between gap-4"
 			>
 				<a
-					href="https://github.com/dipshanadh"
+					href="https://github.com/dipshanadh/vanilla-javascript-projects"
 					target="_blank"
 					class="flex gap-2 items-center font-medium text-lg border-2 border-pink rounded-3xl p-2 hover:scale-110 transition ease-in-out duration-"
 				>
@@ -135,69 +134,10 @@
 				<div
 					class="max-w-screen-lg mx-auto my-16 grid grid-cols-3 gap-8 text-white text-center font-bold text-2xl"
 					id="projects"
-				>
-					<div
-						class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/advice-generator.png')] bg-cover bg-center"
-					>
-						<div
-							class="w-full h-full absolute top-0 left-0 bg-black opacity-50"
-						></div>
-
-						<p class="drop-shadow-md">Advice generator</p>
-
-						<a
-							href="./advice-generator/"
-							class="absolute right-4 top-4 px-2 py-1 bg-orange rounded-lg text-white text-sm font-semibold hover:underline underline-offset-2"
-						>
-							See live
-						</a>
-					</div>
-					<div
-						class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/background-color-switcher.png')] bg-cover bg-center"
-					>
-						<div
-							class="w-full h-full absolute top-0 left-0 bg-black opacity-50"
-						></div>
-
-						<p class="drop-shadow-md">Background-color Switcher</p>
-
-						<a
-							href="./background-color-switcher/"
-							class="absolute right-4 top-4 px-2 py-1 bg-orange rounded-lg text-white text-sm font-semibold hover:underline underline-offset-2"
-						>
-							See live
-						</a>
-					</div>
-				</div>
+				></div>
 			</section>
 		</main>
 
-		<script>
-			const container = document.getElementById("projects");
-
-			container.innerHTML = projects
-				.map(
-					project =>
-						`
-<div
-	class="h-48 rounded-2xl flex justify-center items-center relative bg-[url('./screenshots/${project.link}.png')] bg-cover bg-center"
->
-	<div
-		class="w-full h-full absolute top-0 left-0 bg-black opacity-50"
-	></div>
-
-	<p class="drop-shadow-md">${project.name}</p>
-
-	<a
-		href="./${project.link}"
-		class="absolute right-4 top-4 px-2 py-1 bg-orange roundetext-white text-sm font-semibold hover:underline underline-offset-2"
-	>
-		See live
-	</a>
-</div>
-`
-				)
-				.join("");
-		</script>
+		<script src="./projects.js"></script>
 	</body>
 </html>
